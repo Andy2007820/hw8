@@ -1,0 +1,9 @@
+[data] vocab=322 train_chars=49457 val_chars=4901 block=96 batch=24
+[env] torch=2.11.0+cu128 device=cpu threads=8
+[teacher] params = 0.737280 M (737,280)
+  [teacher] iter    1/200 loss 5.7458 (0.1s)
+  [teacher] iter   50/200 loss 0.9241 (2.2s)
+  [teacher] iter  100/200 loss 0.7885 (4.5s)
+  [teacher] iter  150/200 loss 0.9722 (7.1s)
+  [teacher] iter  200/200 loss 0.7688 (9.5s)
+[teacher] train_loss=0.7806 val_loss=0.7772 ppl=2.18 9.5s

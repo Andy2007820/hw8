@@ -1,0 +1,29 @@
+[data] vocab=322 train_chars=49457 val_chars=4901 block=96 batch=24
+[env] torch=2.11.0+cu128 device=cpu threads=8
+[teacher] reuse teacher.pt val_loss=0.7772 ppl=2.18
+[teacher_C96] params = 0.294912 M (294,912)
+  [teacher_C96] iter    1/200 loss 5.7991 (0.1s)
+  [teacher_C96] iter   50/200 loss 1.0551 (1.4s)
+  [teacher_C96] iter  100/200 loss 0.7900 (2.7s)
+  [teacher_C96] iter  150/200 loss 0.9548 (4.0s)
+  [teacher_C96] iter  200/200 loss 0.7651 (5.4s)
+[teacher_C96] train_loss=0.7780 val_loss=0.7747 ppl=2.17 5.4s
+  [kd_C96] iter    1/120 loss 5.3316 ce 5.7847 kd(T^2) 4.8785 (0.0s)
+  [kd_C96] iter   50/120 loss 1.2375 ce 1.2445 kd(T^2) 1.2306 (1.6s)
+  [kd_C96] iter  100/120 loss 0.5699 ce 0.8001 kd(T^2) 0.3397 (3.1s)
+[scan] C=96 teacher_val=0.7747 student_val=0.7778 gain=3.42%
+  [kd_C160] iter    1/120 loss 5.6845 ce 5.7847 kd(T^2) 5.5844 (0.0s)
+  [kd_C160] iter   50/120 loss 1.3752 ce 1.2275 kd(T^2) 1.5229 (1.8s)
+  [kd_C160] iter  100/120 loss 0.6285 ce 0.7981 kd(T^2) 0.4589 (3.7s)
+[scan] C=160 teacher_val=0.7772 student_val=0.7755 gain=3.71%
+[teacher_C256] params = 1.769472 M (1,769,472)
+  [teacher_C256] iter    1/200 loss 5.7954 (0.1s)
+  [teacher_C256] iter   50/200 loss 1.1958 (4.8s)
+  [teacher_C256] iter  100/200 loss 0.8333 (9.7s)
+  [teacher_C256] iter  150/200 loss 1.0574 (14.5s)
+  [teacher_C256] iter  200/200 loss 0.7994 (19.4s)
+[teacher_C256] train_loss=0.8121 val_loss=0.8099 ppl=2.25 19.4s
+  [kd_C256] iter    1/120 loss 8.1846 ce 5.7847 kd(T^2) 10.5844 (0.0s)
+  [kd_C256] iter   50/120 loss 2.2516 ce 1.2882 kd(T^2) 3.2151 (2.6s)
+  [kd_C256] iter  100/120 loss 0.8288 ce 0.8382 kd(T^2) 0.8195 (5.2s)
+[scan] C=256 teacher_val=0.8099 student_val=0.7992 gain=0.77%

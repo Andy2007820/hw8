@@ -1,0 +1,17 @@
+[data] vocab=322 train_chars=49457 val_chars=4901 block=96 batch=24
+[env] torch=2.11.0+cu128 device=cpu threads=8
+[teacher] reuse teacher.pt val_loss=0.7772 ppl=2.18
+[student] params=0.147456 M compression=5.000x
+  [scratch] iter    1/120 loss 5.7847 (0.1s)
+  [scratch] iter   50/120 loss 1.2149 (1.1s)
+  [scratch] iter  100/120 loss 0.8310 (2.1s)
+[scratch] train_loss=0.8212 val_loss=0.8054 ppl=2.24 agree=0.739 2.6s
+  [kd] iter    1/120 loss 5.6845 ce 5.7847 kd(T^2) 5.5844 (0.0s)
+  [kd] iter   50/120 loss 1.3752 ce 1.2275 kd(T^2) 1.5229 (2.0s)
+  [kd] iter  100/120 loss 0.6285 ce 0.7981 kd(T^2) 0.4589 (4.0s)
+[kd] train_loss=0.7878 val_loss=0.7755 ppl=2.17 agree=0.758 4.8s
+[compare] scratch 0.8054 -> KD 0.7755; relative change 3.71%
+[generate:teacher] 月正好。”欲语还休。书生竹林遥看残灯，此意难平。归客在篱下归雁了一夜看，欣然归去。孤客静听道：“暮云正好。”泪湿衣襟。小红
+[generate:scratch] 月正好。”欲语还休。渔夫竹林独对残灯，忽忆旧游。游子在篱下归雁了一夜看，欣然归去。孤客静听道：“暮云正好。”泪湿衣襟。小红
+[generate:kd] 月正好。”欲语还休。渔夫竹林独对残灯，此意难平。归客在篱下归雁了一夜看，欣然归去。孤舟，此意难平。诗人恰遇道：“归语还休。
+[done] results saved to .\runs_distill

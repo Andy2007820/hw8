@@ -1,0 +1,21 @@
+[data] vocab=322 train_chars=49457 val_chars=4901 block=96 batch=24
+[env] torch=2.11.0+cu128 device=cpu threads=8
+[teacher] reuse teacher.pt val_loss=0.7772 ppl=2.18
+[ablate-scratch] val=0.9135 ppl=2.493
+[ablate] T=1 alpha=0.3 val=0.9007 ppl=2.461 elapsed=4.0s
+[ablate] T=1 alpha=0.5 val=0.8920 ppl=2.440 elapsed=6.1s
+[ablate] T=1 alpha=0.7 val=0.8942 ppl=2.445 elapsed=8.3s
+[ablate] T=1 alpha=0.9 val=0.8938 ppl=2.444 elapsed=10.4s
+[ablate] T=2 alpha=0.3 val=0.8670 ppl=2.380 elapsed=12.5s
+[ablate] T=2 alpha=0.5 val=0.8628 ppl=2.370 elapsed=14.6s
+[ablate] T=2 alpha=0.7 val=0.8679 ppl=2.382 elapsed=16.8s
+[ablate] T=2 alpha=0.9 val=0.8741 ppl=2.397 elapsed=18.9s
+[ablate] T=4 alpha=0.3 val=0.8878 ppl=2.430 elapsed=21.0s
+[ablate] T=4 alpha=0.5 val=0.8651 ppl=2.375 elapsed=23.0s
+[ablate] T=4 alpha=0.7 val=0.8715 ppl=2.390 elapsed=25.1s
+[ablate] T=4 alpha=0.9 val=0.9216 ppl=2.513 elapsed=27.3s
+[ablate] T=8 alpha=0.3 val=0.9062 ppl=2.475 elapsed=29.5s
+[ablate] T=8 alpha=0.5 val=0.8915 ppl=2.439 elapsed=31.7s
+[ablate] T=8 alpha=0.7 val=0.9349 ppl=2.547 elapsed=33.8s
+[ablate] T=8 alpha=0.9 val=1.0627 ppl=2.894 elapsed=35.8s
+[ablate] best T=2 alpha=0.5 val=0.8628; worst T=8 alpha=0.9 val=1.0627

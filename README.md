@@ -1,4 +1,4 @@
-# Character-level GPT Knowledge Distillation on CPU
+# HW8 — Character-level GPT Knowledge Distillation on CPU
 
 一个不依赖预训练权重或外部语料的字符级 GPT 知识蒸馏实验。项目实现了教师模型训练、学生从零训练、软标签蒸馏、16 组温度/权重消融，以及特征蒸馏、自蒸馏、动态量化和教师规模扫描。
 
@@ -101,7 +101,9 @@ python distill_lm.py --mode scan
 | `runs_distill/ablation_heatmap.png` | 4×4 消融热力图 |
 | `runs_distill/suite_manifest.json` | 命令、退出码和墙钟耗时 |
 
-模型 checkpoint 和运行产物均已加入 `.gitignore`，不会默认提交到 GitHub。
+本仓库的 `output/` 保存了本次已运行的 JSON 指标和五幅结果图，`logs/` 保存对应运行日志；本地绝对路径已脱敏。重新运行代码会生成 `runs_distill/`，不会自动覆盖这些快照。
+
+模型 checkpoint、新生成的 `runs_distill/`、实验报告和临时文件均已加入 `.gitignore`，不会默认提交到 GitHub。
 
 ## 实验口径与注意事项
 

@@ -1,0 +1,127 @@
+{
+  "python": "python",
+  "device": "cpu",
+  "runs": [
+    {
+      "name": "validate",
+      "command": [
+        "python",
+        "validate_experiment.py"
+      ],
+      "returncode": 0,
+      "elapsed_s": 4.398133199894801,
+      "log": "validate.log"
+    },
+    {
+      "name": "quick",
+      "command": [
+        "python",
+        "-u",
+        "distill_lm.py",
+        "--mode",
+        "quick"
+      ],
+      "returncode": 0,
+      "elapsed_s": 7.286211400059983,
+      "log": "quick.log"
+    },
+    {
+      "name": "teacher",
+      "command": [
+        "python",
+        "-u",
+        "distill_lm.py",
+        "--mode",
+        "teacher",
+        "--retrain"
+      ],
+      "returncode": 0,
+      "elapsed_s": 15.003637799993157,
+      "log": "teacher.log"
+    },
+    {
+      "name": "all",
+      "command": [
+        "python",
+        "-u",
+        "distill_lm.py",
+        "--mode",
+        "all"
+      ],
+      "returncode": 0,
+      "elapsed_s": 15.354857800062746,
+      "log": "all.log"
+    },
+    {
+      "name": "ablate",
+      "command": [
+        "python",
+        "-u",
+        "distill_lm.py",
+        "--mode",
+        "ablate"
+      ],
+      "returncode": 0,
+      "elapsed_s": 43.06625870009884,
+      "log": "ablate.log"
+    },
+    {
+      "name": "feature",
+      "command": [
+        "python",
+        "-u",
+        "distill_lm.py",
+        "--mode",
+        "all",
+        "--feat",
+        "0.1",
+        "--run-tag",
+        "feat"
+      ],
+      "returncode": 0,
+      "elapsed_s": 14.394059699960053,
+      "log": "feature.log"
+    },
+    {
+      "name": "self_distill",
+      "command": [
+        "python",
+        "-u",
+        "distill_lm.py",
+        "--mode",
+        "self-distill"
+      ],
+      "returncode": 0,
+      "elapsed_s": 13.78241840004921,
+      "log": "self_distill.log"
+    },
+    {
+      "name": "quantize",
+      "command": [
+        "python",
+        "-u",
+        "distill_lm.py",
+        "--mode",
+        "quantize"
+      ],
+      "returncode": 0,
+      "elapsed_s": 3.6698233999777585,
+      "log": "quantize.log"
+    },
+    {
+      "name": "teacher_scan",
+      "command": [
+        "python",
+        "-u",
+        "distill_lm.py",
+        "--mode",
+        "scan"
+      ],
+      "returncode": 0,
+      "elapsed_s": 47.69547570007853,
+      "log": "teacher_scan.log"
+    }
+  ],
+  "total_elapsed_s": 164.6559331000317,
+  "status": "completed"
+}

@@ -1,0 +1,28 @@
+[data] vocab=322 train_chars=49457 val_chars=4901 block=96 batch=24
+[env] torch=2.11.0+cu128 device=cpu threads=8
+[teacher] reuse teacher.pt val_loss=0.7772 ppl=2.18
+.\distill_lm.py:796: DeprecationWarning: torch.ao.quantization is deprecated and will be removed in 2.10. 
+For migrations of users: 
+1. Eager mode quantization (torch.ao.quantization.quantize, torch.ao.quantization.quantize_dynamic), please migrate to use torchao eager mode quantize_ API instead 
+2. FX graph mode quantization (torch.ao.quantization.quantize_fx.prepare_fx,torch.ao.quantization.quantize_fx.convert_fx, please migrate to use torchao pt2e quantization API instead (prepare_pt2e, convert_pt2e) 
+3. pt2e quantization has been migrated to torchao (https://github.com/pytorch/ao/tree/main/torchao/quantization/pt2e) 
+see https://github.com/pytorch/ao/issues/2259 for more details
+  quantized = tq.quantize_dynamic(copy.deepcopy(student), {nn.Linear}, dtype=torch.qint8)
+{
+  "fp32_loss": 0.775502410531044,
+  "int8_loss": 0.7757414162158967,
+  "loss_change": 0.00023900568485268892,
+  "fp32_ppl": 2.1716829295190863,
+  "int8_ppl": 2.1722020361171817,
+  "fp32_bytes": 674606,
+  "int8_bytes": 324552,
+  "size_ratio_fp32_over_int8": 2.0785760063102368,
+  "size_reduction_pct": 51.890140318941725,
+  "fp32_latency_ms": 0.9726750082336366,
+  "int8_latency_ms": 2.0745200105011463,
+  "speedup_fp32_over_int8": 0.46886749865510596,
+  "latency_batch": 1,
+  "latency_block": 96,
+  "latency_repeats": 20,
+  "int8_agree_with_fp32_teacher": 0.75859375
+}

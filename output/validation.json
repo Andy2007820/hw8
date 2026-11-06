@@ -1,0 +1,55 @@
+{
+  "data": {
+    "vocab": 322,
+    "train_chars": 49457,
+    "val_chars": 4901,
+    "shared_val_lines": 0,
+    "val_oov_characters": 0
+  },
+  "parameter_count": {
+    "teacher": {
+      "actual": 737280,
+      "approximate": 732800,
+      "relative_error_pct": 0.607638888888889
+    },
+    "student": {
+      "actual": 147456,
+      "approximate": 145664,
+      "relative_error_pct": 1.215277777777778
+    }
+  },
+  "fair_control": "identical initialization and all 120 training batches: PASS",
+  "causal_mask": {
+    "max_past_logit_difference": 0.0
+  },
+  "kl_direction_and_reduction": {
+    "torch": 0.7657617720785718,
+    "manual": 0.7657617720785725
+  },
+  "alpha_zero": "loss exactly equals hard-label CE: PASS",
+  "kd_gradient": {
+    "analytic": 0.028750148202587505,
+    "finite_difference": 0.028750148195477717
+  },
+  "temperature": {
+    "entropy_T1": 1.1722761753828597,
+    "entropy_T4": 1.3692929877384505,
+    "identical_distribution_kl": 0.0
+  },
+  "environment": {
+    "os": "Windows",
+    "os_release": "11",
+    "os_version": "10.0.26200",
+    "python": "3.14.8 (tags/v3.14.8:8e6e75d, Sep 30 2026, 18:19:33) [MSC v.1944 64 bit (AMD64)]",
+    "python_executable": "python",
+    "torch": "2.11.0+cu128",
+    "device": "cpu",
+    "cuda_visible_devices": "",
+    "cuda_available_after_import": true,
+    "cpu": "Intel(R) Core(TM) Ultra 7 251HX",
+    "logical_cpus": 18,
+    "torch_threads": 8,
+    "physical_memory_bytes": 33650176000,
+    "physical_memory_gib": 31.339168548583984
+  }
+}

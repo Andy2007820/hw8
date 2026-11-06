@@ -1,0 +1,17 @@
+[data] vocab=322 train_chars=49457 val_chars=4901 block=96 batch=8
+[env] torch=2.11.0+cu128 device=cpu threads=8
+[teacher] reuse teacher.pt val_loss=1.2996 ppl=3.67
+[student] params=0.147456 M compression=5.000x
+  [scratch] iter    1/20 loss 5.7890 (0.1s)
+  [scratch] iter   10/20 loss 4.3682 (0.2s)
+  [scratch] iter   20/20 loss 2.9846 (0.3s)
+[scratch] train_loss=2.8462 val_loss=2.8444 ppl=17.19 agree=0.725 0.3s
+  [kd] iter    1/20 loss 4.0803 ce 5.7890 kd(T^2) 2.3717 (0.0s)
+  [kd] iter   10/20 loss 2.9955 ce 4.5180 kd(T^2) 1.4731 (0.2s)
+  [kd] iter   20/20 loss 2.1160 ce 3.3145 kd(T^2) 0.9175 (0.3s)
+[kd] train_loss=3.1862 val_loss=3.1844 ppl=24.15 agree=0.714 0.3s
+[compare] scratch 2.8444 -> KD 3.1844; relative change -11.95%
+[generate:teacher] 月正好。”欲语。”泪湿归去道：“孤舟了一夜看，不觉天明篱下听，此意难平。小明月可惜。山，此意难平。诗人在舟中惆怅。旅人又逢
+[generate:scratch] 月道：见听。叹一在窗。归去道：“一”此意无语还遇一声。小湿年山旧，然无惆见道道：“。”长前语游。诗旧意难平听“明语。小一道
+[generate:kd] 月道：依，欲听见在窗花花：花了山年长然无忆可舟然一声。小湿怅“见，然无惆见道道：一夜惆别道：“落中忆惆远帆惆“明归去细雨道
+[done] results saved to .\runs_distill\quick

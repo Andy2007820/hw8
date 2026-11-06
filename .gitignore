@@ -7,9 +7,8 @@ __pycache__/
 venv/
 env/
 
-# Experiment artifacts
+# New experiment artifacts (curated snapshots in output/ and logs/ are tracked)
 runs_distill/
-output/
 *.pt
 *.pth
 *.ckpt

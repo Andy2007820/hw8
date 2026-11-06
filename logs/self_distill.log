@@ -1,0 +1,13 @@
+[data] vocab=322 train_chars=49457 val_chars=4901 block=96 batch=24
+[env] torch=2.11.0+cu128 device=cpu threads=8
+[teacher] reuse teacher.pt val_loss=0.7772 ppl=2.18
+  [self-teacher] iter    1/240 loss 5.7847 (0.1s)
+  [self-teacher] iter   50/240 loss 1.2149 (1.0s)
+  [self-teacher] iter  100/240 loss 0.8310 (2.0s)
+  [self-teacher] iter  150/240 loss 0.9813 (3.0s)
+  [self-teacher] iter  200/240 loss 0.7656 (4.1s)
+[self-teacher] train_loss=0.7841 val_loss=0.7749 ppl=2.17 4.9s
+  [self-kd] iter    1/120 loss 4.9871 ce 5.7847 kd(T^2) 4.1896 (0.0s)
+  [self-kd] iter   50/120 loss 0.9643 ce 1.2096 kd(T^2) 0.7189 (1.4s)
+  [self-kd] iter  100/120 loss 0.4489 ce 0.7794 kd(T^2) 0.1184 (2.9s)
+[self-kd] train_loss=0.7853 val_loss=0.7699 ppl=2.16 agree=0.778 3.4s
