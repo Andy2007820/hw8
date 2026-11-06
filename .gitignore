@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+.venv/
+venv/
+env/
+
+# Experiment artifacts
+runs_distill/
+output/
+*.pt
+*.pth
+*.ckpt
+
+# Local reports and source attachments
+src/
+artifacts/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Test and coverage caches
+.pytest_cache/
+.coverage
+htmlcov/
